@@ -26,7 +26,7 @@ const TheirMessage = ({ lastMessage, message }) => {
             marginLeft: isFirstMessageByUser ? "4px" : "48px",
           }}
         >
-          {message.text}
+          {message.text.replace( /(<([^>]+)>)/ig, '')}
         </div>
       )}
     </div>
